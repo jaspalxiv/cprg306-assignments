@@ -10,6 +10,7 @@ export default function Home() {
     <div>
       <h1>My app week-2</h1>
       <p><Link href="/week_2" > Go to Week 2</Link></p>
+      <p>Sum of {a} and {b} is {a + b}</p>
     </div>
   );
 }
