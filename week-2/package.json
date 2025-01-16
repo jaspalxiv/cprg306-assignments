@@ -1,5 +1,5 @@
 {
-  "name": "week-2-demo",
+  "name": "week-2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "week-2-demo": "file:"
+    "week-2": "file:"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
