@@ -8,7 +8,8 @@ export default function Home() {
      
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
       <ul>
-        <li><Link href={"./week-2/"}>Week 2</Link></li>
+      <li><Link href={"./week-2/"}>Week 2</Link></li>
+      <li><Link href={"./week-3/"}>Week 3</Link></li>
       </ul>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
