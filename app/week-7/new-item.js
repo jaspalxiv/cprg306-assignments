@@ -27,7 +27,7 @@ export default function NewItem({ handleAddItem }) {
         const id = Array(18).fill(0).map(() => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
         let item = { "id": id, "name": name, "category": category, "quantity": quantity }
 
-        console.log(JSON.stringify(item))
+       // console.log(JSON.stringify(item))
         handleAddItem(item)
 
         setName("");

@@ -13,7 +13,7 @@ export default function Page() {
 
     function handleAddItem(obj) {
         setItems([...items, obj])
-        alert("Item added...: " + JSON.stringify(obj));
+       // alert("Item added...: " + JSON.stringify(obj));
     }
 
     return (
