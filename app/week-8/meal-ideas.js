@@ -7,7 +7,7 @@ export default function MealIdeas({ ingredient }) {
     useEffect(() => {
         if (!ingredient) return;
 
-        ingredient = ingredient.replace(/[\u{1F300}-\u{1FAD6}]/gu, '') // Remove emojis
+        ingredient = ingredient.replace(/[🌀-🫖]/gu, '') // Remove emojis
             .split(",")[0] // Take first word before comma
             .trimEnd() // Trim spaces
             .replace(/s$/, ''); // Remove trailing 's' if present
@@ -19,17 +19,19 @@ export default function MealIdeas({ ingredient }) {
                 alert(JSON.stringify(response));
             }
         });
-
     }, [ingredient]);
 
     return (
         <div className="flex justify-end p-4">
             <div className="w-80 bg-white shadow-lg rounded-lg p-4">
                 <h1 className="text-xl font-semibold mb-3 text-black">Meal Ideas</h1>
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="space-y-2">
                     {meals.length > 0 ? (
                         meals.map(meal => (
-                            <li key={meal.idMeal} className="text-gray-700">{meal.strMeal}</li>
+                            <li key={meal.idMeal} className="flex items-center space-x-3">
+                                <img src={meal.strMealThumb} alt={meal.strMeal} className="w-12 h-12 rounded-md object-cover" />
+                                <span className="text-gray-700">{meal.strMeal}</span>
+                            </li>
                         ))
                     ) : (
                         <li className="text-gray-500">No meals found</li>
